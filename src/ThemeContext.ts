@@ -1,5 +1,3 @@
-// src/ThemeContext.ts
-
 import React from 'react';
 
 export const themes = {

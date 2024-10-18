@@ -1,6 +1,6 @@
 // src/constants.ts
 
-import { Label, Note } from './types';
+import { Label, Note, GroceryItem } from './types';
 
 export const dummyNotesList: Note[] = [
   {
@@ -27,4 +27,21 @@ export const dummyNotesList: Note[] = [
     content: 'Content for note 4',
     label: Label.study,
   },
+  {
+    id: 5,
+    title: 'Sample Note 5',
+    content: 'Content for note 5',
+    label: Label.study,
+  },
+  {
+    id: 6,
+    title: 'Sample Note 6',
+    content: 'Content for note 6',
+    label: Label.personal,
+  },
+];
+
+export const dummyGroceryList: GroceryItem[] = [
+  { name: 'Apples', isPurchased: false },
+  { name: 'Bananas', isPurchased: false },
 ];
