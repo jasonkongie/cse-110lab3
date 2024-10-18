@@ -1,38 +1,130 @@
-.App {
-  text-align: center;
+/* src/App.css */
+
+body {
+  margin: 20px;
+  background-color: lightgrey;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.note-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 20px;
+}
+
+.note-form input,
+.note-form textarea,
+.note-form select {
+  border-radius: 5px;
+  border: 1px solid black;
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+}
+
+.note-form button {
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.note-form button:hover {
+  opacity: 0.8;
+}
+
+.toggle-theme-button {
+  align-self: flex-end;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: minmax(250px, auto);
+  gap: 20px;
+  width: 100%;
+}
+
+.note-item {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.notes-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.notes-header button {
+  font-size: 16px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.edit-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.edit-form input,
+.edit-form textarea,
+.edit-form select {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.edit-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-buttons button {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.edit-buttons button:last-of-type {
+  background-color: rgb(220, 89, 89);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.favorites-section {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 500px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.favorites-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.favorites-section li {
+  padding: 5px 0;
 }
